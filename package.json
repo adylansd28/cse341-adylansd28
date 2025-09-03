@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/adylansd28/cse341-adylansd28/issues"
   },
-  "homepage": "https://github.com/adylansd28/cse341-adylansd28#readme"
+  "homepage": "https://github.com/adylansd28/cse341-adylansd28#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
 }
