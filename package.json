@@ -1,0 +1,19 @@
+{
+  "name": "cse341-adylansd28",
+  "version": "1.0.0",
+  "description": "My First Project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adylansd28/cse341-adylansd28.git"
+  },
+  "author": "Dilan Salas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adylansd28/cse341-adylansd28/issues"
+  },
+  "homepage": "https://github.com/adylansd28/cse341-adylansd28#readme"
+}
