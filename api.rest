@@ -1,0 +1,11 @@
+### Enviroment
+@baseUrl = http://localhost:3000
+# @baseUrl = https://<tu-app>.onrender.com
+
+### Get all contacts
+GET {{baseUrl}}/users
+Accept: application/json
+
+### Get single contact (cambia el ID)
+GET {{baseUrl}}/users/68b89cb320de8df451e56020
+Accept: application/json
