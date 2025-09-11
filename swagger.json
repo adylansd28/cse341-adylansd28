@@ -5,10 +5,11 @@
     "description": "Users Api",
     "version": "1.0.0"
   },
-  "host": "project1-d7q7.onrender.com",
+  "host": "localhost:3000",
   "basePath": "/",
   "schemes": [
-    "https"
+    "https",
+    "http"
   ],
   "paths": {
     "/": {
@@ -24,12 +25,22 @@
         }
       }
     },
+    "/api-docs/": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
     "/users/": {
       "get": {
         "tags": [
           "Users"
         ],
-        "description": "",
+        "description": "Get all users",
         "responses": {
           "200": {
             "description": "OK"
@@ -43,28 +54,35 @@
         "tags": [
           "Users"
         ],
-        "description": "",
+        "description": "Create a new user",
         "parameters": [
           {
             "name": "body",
             "in": "body",
+            "description": "User payload",
+            "required": true,
             "schema": {
               "type": "object",
               "properties": {
                 "firstName": {
-                  "example": "any"
+                  "type": "string",
+                  "example": "Carlos"
                 },
                 "lastName": {
-                  "example": "any"
+                  "type": "string",
+                  "example": "Ramirez"
                 },
                 "email": {
-                  "example": "any"
+                  "type": "string",
+                  "example": "carlos.ramirez@example.com"
                 },
                 "favoriteColor": {
-                  "example": "any"
+                  "type": "string",
+                  "example": "Blue"
                 },
                 "birthday": {
-                  "example": "any"
+                  "type": "string",
+                  "example": "1990-05-14"
                 }
               }
             }
@@ -85,13 +103,14 @@
         "tags": [
           "Users"
         ],
-        "description": "",
+        "description": "Get a user by ID",
         "parameters": [
           {
             "name": "id",
             "in": "path",
             "required": true,
-            "type": "string"
+            "type": "string",
+            "description": "User ID"
           }
         ],
         "responses": {
@@ -113,34 +132,42 @@
         "tags": [
           "Users"
         ],
-        "description": "",
+        "description": "Replace a user by ID",
         "parameters": [
           {
             "name": "id",
             "in": "path",
             "required": true,
-            "type": "string"
+            "type": "string",
+            "description": "User ID"
           },
           {
             "name": "body",
             "in": "body",
+            "description": "User payload (full replacement)",
+            "required": true,
             "schema": {
               "type": "object",
               "properties": {
                 "firstName": {
-                  "example": "any"
+                  "type": "string",
+                  "example": "Carlos"
                 },
                 "lastName": {
-                  "example": "any"
+                  "type": "string",
+                  "example": "Ramirez"
                 },
                 "email": {
-                  "example": "any"
+                  "type": "string",
+                  "example": "carlos.ramirez@example.com"
                 },
                 "favoriteColor": {
-                  "example": "any"
+                  "type": "string",
+                  "example": "Blue"
                 },
                 "birthday": {
-                  "example": "any"
+                  "type": "string",
+                  "example": "1990-05-14"
                 }
               }
             }
@@ -165,13 +192,14 @@
         "tags": [
           "Users"
         ],
-        "description": "",
+        "description": "Delete a user by ID",
         "parameters": [
           {
             "name": "id",
             "in": "path",
             "required": true,
-            "type": "string"
+            "type": "string",
+            "description": "User ID"
           }
         ],
         "responses": {
